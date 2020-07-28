@@ -11,19 +11,16 @@
 </head>
 <body>
 	<div id="app">
-		<h1>{{value}}</h1>
-		<input id="INPUT" type="text" @keyUp.enter.exact="setValue()">
+		<ul>
+			<li v-for="i in 9">
+				2 x {{ i }} = {{ 2 * i }}
+			</li>
+		</ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script>
 		const app = new Vue({
-			el: '#app',
-			data: { value: "value" },
-			methods: {
-				setValue: function(){
-					this.value = document.getElementById('INPUT').value;
-				}
-			}
+			el: '#app'
 		});
 	</script>
 </body>
